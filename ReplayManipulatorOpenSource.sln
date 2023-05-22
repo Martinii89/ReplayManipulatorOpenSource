@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReplayManipulatorOpenSource", "ReplayManipulatorOpenSource\ReplayManipulatorOpenSource.vcxproj", "{EB1C0538-20BE-4309-BED3-88D829436D22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4DE165B8-D6FF-4AEB-A6F9-1BC9B5EF9A3D}"
+	ProjectSection(SolutionItems) = preProject
+		vcpkg.json = vcpkg.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB1C0538-20BE-4309-BED3-88D829436D22}.Release|x64.ActiveCfg = Release|x64
+		{EB1C0538-20BE-4309-BED3-88D829436D22}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4705C94E-3D40-4DA5-B216-584F75E23B22}
+	EndGlobalSection
+EndGlobal
