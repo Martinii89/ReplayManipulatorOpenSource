@@ -45,6 +45,7 @@ private:
         pluginsdk::Equipslot::TRAIL,
         pluginsdk::Equipslot::PAINTFINISH,
         pluginsdk::Equipslot::CUSTOMFINISH,
-        pluginsdk::Equipslot::ENGINEAUDIO
+        pluginsdk::Equipslot::ENGINEAUDIO,
+        pluginsdk::Equipslot::GOALEXPLOSION,
     };
 };
