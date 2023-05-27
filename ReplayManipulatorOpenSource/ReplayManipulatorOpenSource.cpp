@@ -11,6 +11,7 @@
 #include "Features/Camera/CameraFocus.h"
 #include "Features/Camera/CameraSettingsOverride.h"
 #include "Features/CarRotator/CarRotator.h"
+#include "Features/Credits/Credits.h"
 #include "Features/CustomTextures/CustomTextures.h"
 #include "Features/Items/ItemPaints.h"
 #include "Features/Items/Items.h"
@@ -46,6 +47,7 @@ void ReplayManipulatorOpenSource::onLoad()
     player_rename_ = std::make_shared<PlayerRenamer>(gameWrapper);
     dollycam_manager_ = CreateModule<CamPathsManager>(gameWrapper, cvarManager,
                                                       gameWrapper->GetDataFolder() / "campaths");
+    credits_ = CreateModule<CreditsInSettings>(gameWrapper);
 
     items_ = std::make_shared<Items>(gameWrapper);
     paint_finish_colors_ = std::make_shared<PaintFinishColors>();
