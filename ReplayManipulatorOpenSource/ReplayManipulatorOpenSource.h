@@ -9,6 +9,7 @@
 
 #include "version.h"
 #include "Features/CamPathsManager/CamPathsManager.h"
+#include "Features/Credits/Credits.h"
 #include "Features/CustomTextures/CustomTextures.h"
 
 #include <memory>
@@ -113,4 +114,5 @@ private:
     std::shared_ptr<ReplayManager> replay_manager_;
     std::shared_ptr<TextureCache> texture_cache_;
     std::shared_ptr<CamPathsManager> dollycam_manager_;
+    std::shared_ptr<CreditsInSettings> credits_;
 };

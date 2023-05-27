@@ -1,4 +1,5 @@
 ﻿#pragma once
+#pragma once
 #include "IMGUI/imgui.h"
 
 static void HelpMarker(const char* desc)
@@ -81,4 +82,7 @@ template <typename X>
 ScopeId(X) -> ScopeId<X>;
 //// Will cause a error 
 //ScopeId(std::string) -> ScopeId<const char*>;
+
+void AddUnderLine(ImColor col);
+void TextUrl(const char* name, const char* url);
 }

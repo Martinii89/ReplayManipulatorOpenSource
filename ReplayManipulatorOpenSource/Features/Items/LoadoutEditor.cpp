@@ -16,9 +16,9 @@ size_t FindCaseInsensitive(std::string data, std::string to_search, const size_t
     return data.find(to_search, pos);
 }
 
-void RemoveAttribute(pluginsdk::ItemData item, pluginsdk::ItemAttribute::AttributeType type)
+void RemoveAttribute(pluginsdk::ItemData& item, const pluginsdk::ItemAttribute::AttributeType& type)
 {
-    const auto it = std::ranges::find_if(item.attributes, [type](const pluginsdk::ItemAttribute& attribute) {
+    auto it = std::ranges::find_if(item.attributes, [type](const pluginsdk::ItemAttribute& attribute) {
         return attribute.type == type;
     });
 
@@ -28,7 +28,7 @@ void RemoveAttribute(pluginsdk::ItemData item, pluginsdk::ItemAttribute::Attribu
     }
 }
 
-pluginsdk::ItemAttribute* GetAttributeOrNull(pluginsdk::ItemData& item, pluginsdk::ItemAttribute::AttributeType type)
+pluginsdk::ItemAttribute* GetAttributeOrNull(pluginsdk::ItemData& item, const pluginsdk::ItemAttribute::AttributeType& type)
 {
     const auto it = std::ranges::find_if(item.attributes, [type](const pluginsdk::ItemAttribute& attribute) {
         return attribute.type == type;
@@ -40,7 +40,7 @@ pluginsdk::ItemAttribute* GetAttributeOrNull(pluginsdk::ItemData& item, pluginsd
     return nullptr;
 }
 
-void SetOrAddAttribute(pluginsdk::ItemData& item, pluginsdk::ItemAttribute attribute)
+void SetOrAddAttribute(pluginsdk::ItemData& item, const pluginsdk::ItemAttribute& attribute)
 {
     if (const auto att = GetAttributeOrNull(item, attribute.type))
     {
